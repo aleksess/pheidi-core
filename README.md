@@ -34,6 +34,15 @@ Or install it yourself as:
 $ gem install pheidi-core
 ```
 
+## Setup
+
+```bash
+$ rails generate pheidi:install
+$ rails db:migrate:pheidi
+```
+
+
+
 ## Contributing
 Contribution directions go here.
 
