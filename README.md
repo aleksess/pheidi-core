@@ -1,5 +1,18 @@
-# pheidi-core
-Short description and motivation.
+# 🏃‍♂️ Pheidi
+### The Marathon-Grade Messaging Engine for Rails
+
+In 490 BC, Pheidippides ran from Marathon to Athens to deliver a single message. 
+**Pheidi** does the same for your Rails app: it delivers messages with 
+uncompromising reliability and speed, while isolating the messaging 
+infrastructure from your primary database so your app never loses its breath.
+
+**Gifts included:**
+- 🛡️ **Database Isolation:** Keeps messaging data in its own silo (SQLite/PG/MySQL).
+- ⚡ **Hotwire Native:** Real-time updates with zero custom JavaScript.
+- 🧬 **Polymorphic:** Works with any User, Account, or Bot model.
+- 🔑 **UUID-first:** Built for modern, distributed, and scalable architectures.
+- **JSON API:** Full CRUD operations for messages, threads, and more for SPA based frontends and mobile apps.
+
 
 ## Usage
 How to use my plugin.
