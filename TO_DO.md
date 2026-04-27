@@ -9,22 +9,22 @@ This document tracks the progress of the Pheidi Messaging Engine toward its 1.0.
 
 - [ ] **Namespace Refactoring:** Ensure the gem uses the `Pheidi` namespace (not `Pheidi::Core`).
 - [ ] **Gemspec Polish:** Update descriptions, homepages, and dependencies in `pheidi-core.gemspec`.
-- [ ] **Install Generator:**
+- [x] **Install Generator:**
     - [x] Generate `config/initializers/pheidi.rb`.
-    - [ ] Inject `pheidi_development` blocks into the host app's `database.yml`.
-    - [ ] Copy isolated migrations to `db/pheidi_migrate`.
-- [ ] **Outbase Connection:** Finalize `resolve_connection` logic in `Pheidi::ApplicationRecord`.
+    - [x] Inject `pheidi_development` blocks into the host app's `database.yml`.
+    - [x] Copy isolated migrations to `db/pheidi_migrate`.
+- [x] **Outbase Connection:** Finalize `resolve_connection` logic in `Pheidi::ApplicationRecord`.
 - [ ] **The "Magic" Rake Task:** Implement `pheidi:db:prepare` to handle migrations in the isolated database.
 
 ## 🚀 Phase 2: Messaging Logic (The Pace)
 *Goal: Implement core business logic and polymorphic relationships.*
 
-- [ ] **Base Models:**
-    - [ ] `Pheidi::Conversation` (UUID, Slug, Metadata).
-    - [ ] `Pheidi::Membership` (Polymorphic Participant, Roles).
-    - [ ] `Pheidi::Message` (Polymorphic Sender, Body).
-- [ ] **Participant Concern:** Create `Pheidi::Participant` to be included in host models (`User`, `Account`, etc.).
-- [ ] **The Policy Hook:** Implement `Pheidi::BasePolicy` and authorization checks in controllers.
+- [x] **Base Models:**
+    - [x] `Pheidi::Conversation` (UUID, Slug, Metadata).
+    - [x] `Pheidi::Membership` (Polymorphic Participant, Roles).
+    - [x] `Pheidi::Message` (Polymorphic Sender, Body).
+- [x] **Participant Concern:** Create `Pheidi::Participant` to be included in host models (`User`, `Account`, etc.).
+- [x] **The Policy Hook:** Implement `Pheidi::BasePolicy` and authorization checks in controllers.
 - [ ] **Internal API:** Build service objects/methods for creating conversations and managing members.
 
 ## 📡 Phase 3: Real-time & Streams (The Delivery)
