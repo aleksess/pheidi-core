@@ -8,7 +8,7 @@ module Pheidi
       config_name = "pheidi_#{env}"
       
       if Rails.configuration.database_configuration.key?(config_name)
-        connects_to database: { writing: :pheidi, reading: :pheidi }
+        connects_to database: { writing: config_name.to_sym, reading: config_name.to_sym }
       else
         # Fallback dla dewelopera, który jeszcze nie odpalił generatora
         self.connection_specification_name = "primary"
