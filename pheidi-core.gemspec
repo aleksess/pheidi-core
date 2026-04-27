@@ -3,11 +3,11 @@ require_relative "lib/pheidi/version"
 Gem::Specification.new do |spec|
   spec.name        = "pheidi-core"
   spec.version     = Pheidi::VERSION
-  spec.authors     = [ "" ]
+  spec.authors     = [ "Aleksander Jodlowski" ]
   spec.email       = [ "and0941@gmail.com" ]
   spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of Pheidi."
-  spec.description = "TODO: Description of Pheidi."
+  spec.summary     = "High-performance, isolated messaging infrastructure for Ruby on Rails."
+  spec.description = "Pheidi is a modern messaging engine designed with an \"Outbase\" philosophy. It keeps your communication data in a separate, isolated database (SQLite, Postgres, or MySQL), ensuring your primary application database remains lean and performant. Built with UUIDs, polymorphic participants, and native Hotwire support, Pheidi delivers a professional-grade inbox experience without the technical debt."
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"

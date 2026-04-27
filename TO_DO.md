@@ -10,7 +10,7 @@ This document tracks the progress of the Pheidi Messaging Engine toward its 1.0.
 - [ ] **Namespace Refactoring:** Ensure the gem uses the `Pheidi` namespace (not `Pheidi::Core`).
 - [ ] **Gemspec Polish:** Update descriptions, homepages, and dependencies in `pheidi-core.gemspec`.
 - [ ] **Install Generator:**
-    - [ ] Generate `config/initializers/pheidi.rb`.
+    - [x] Generate `config/initializers/pheidi.rb`.
     - [ ] Inject `pheidi_development` blocks into the host app's `database.yml`.
     - [ ] Copy isolated migrations to `db/pheidi_migrate`.
 - [ ] **Outbase Connection:** Finalize `resolve_connection` logic in `Pheidi::ApplicationRecord`.
