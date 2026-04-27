@@ -2,19 +2,13 @@ module Pheidi
   class ApplicationRecord < ActiveRecord::Base
     self.abstract_class = true
 
+    connects_to database: { writing: Pheidi.configuration.database, reading: Pheidi.configuration.database }
 
-    def self.resolve_connection
-      env = Rails.env
-      config_name = "pheidi_#{env}"
-      
-      if Rails.configuration.database_configuration.key?(config_name)
-        connects_to database: { writing: config_name.to_sym, reading: config_name.to_sym }
-      else
-        # Fallback dla dewelopera, który jeszcze nie odpalił generatora
-        self.connection_specification_name = "primary"
-      end
+    before_create :generate_uuid
+    private
+
+    def generate_uuid
+      self.id ||= SecureRandom.uuid
     end
-
-    resolve_connection
   end
 end
