@@ -1,4 +1,4 @@
-class CreatePheidiTables < ActiveRecord::Migration[7.1]
+class CreatePheidiTables < ActiveRecord::Migration[8.1]
   def change
     # conversations
     create_table :pheidi_conversations, id: :uuid do |t|
@@ -12,7 +12,7 @@ class CreatePheidiTables < ActiveRecord::Migration[7.1]
       t.references :conversation, type: :uuid, null: false
       t.string :participant_type, null: false
       t.string :participant_id,   null: false
-      t.string :role, default: 'member'
+      t.string :role, default: "member"
       t.timestamps
     end
 
